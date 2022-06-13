@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<Reference>
+    <book>
+        <Info DOI="first" />
+        <Info Author="Author" />
+        <Info Title="Title" />
+        <Info Journal="Journal" />
+        <Info Date="Date" />
+        <Info Type="Type" />
+    </book>
+    <book>
+        <Info DOI="second" />
+        <Info Author="Author1" />
+        <Info Title="Title1" />
+        <Info Journal="Journal1" />
+        <Info Date="Date1" />
+        <Info Type="Type1" />
+    </book>
+    <book>
+        <Info DOI="third" />
+        <Info Author="Author1" />
+        <Info Title="Title1" />
+        <Info Journal="Journal1" />
+        <Info Date="Date1" />
+        <Info Type="Type1" />
+    </book>
+</Reference>
