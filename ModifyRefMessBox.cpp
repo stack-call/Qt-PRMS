@@ -89,6 +89,11 @@ void ModifyRefMessBox::saveRefMess(){
                 return;
             }
         }
+        if(this->Type->text().toStdString() != "Article" && this->Type->text().toStdString() != "Review")
+        {
+            QMessageBox::warning(this,"提示","文献类型错误",QMessageBox::Ok);
+            return;
+        }
         Reference* ref = new Reference;
         ref->setDOI(this->DOI->text().toStdString());
         ref->setAuthor(this->Author->text().toStdString());

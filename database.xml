@@ -1,27 +1,27 @@
 <?xml version="1.0" ?>
 <Reference>
     <book>
-        <Info DOI="first" />
-        <Info Author="Author" />
-        <Info Title="Title" />
-        <Info Journal="Journal" />
-        <Info Date="Date" />
-        <Info Type="Type" />
+        <Info DOI="10.16525/j.cnki.cn14-1134/th.2022.04.137" />
+        <Info Author="胡延东" />
+        <Info Title="QT直线共轭内啮合齿轮泵的故障分析与修复" />
+        <Info Journal="机械管理开发" />
+        <Info Date="2022-04-30" />
+        <Info Type="Article" />
     </book>
     <book>
-        <Info DOI="second" />
-        <Info Author="Author1" />
-        <Info Title="Title1" />
-        <Info Journal="Journal1" />
-        <Info Date="Date1" />
-        <Info Type="Type1" />
+        <Info DOI="10.19652/j.cnki.femt.2103457" />
+        <Info Author="王万富 王琢 刘佳鑫 韩亚辉 李春波" />
+        <Info Title="基于Qt/Embedded的农林智能装备导航定位算法研究及软件设计" />
+        <Info Journal="国外电子测量技术" />
+        <Info Date="2022-03-15" />
+        <Info Type="Article" />
     </book>
     <book>
-        <Info DOI="third" />
-        <Info Author="Author1" />
-        <Info Title="Title1" />
-        <Info Journal="Journal1" />
-        <Info Date="Date1" />
-        <Info Type="Type1" />
+        <Info DOI="10.16311/j.audioe.2022.03.025" />
+        <Info Author="王雅君" />
+        <Info Title="基于Qt开发框架的多波束测深声呐显控技术研究" />
+        <Info Journal="电声技术" />
+        <Info Date="2022-03-05" />
+        <Info Type="Review" />
     </book>
 </Reference>
