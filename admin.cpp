@@ -83,7 +83,7 @@ QGroupBox * admin::createMenu(){
     //当向输入框内输入信息后，执行 findRefMess() 方法
     connect(FindRefEdit,&QLineEdit::returnPressed,this,&admin::findRefMess);
     //点击退出按钮，关闭主窗口
-    connect(ExitBtn,&QPushButton::clicked,this,&admin::close);
+    connect(ExitBtn,&QPushButton::clicked,this,&admin::ExitMess);
     //点击保存按钮，执行 saveRefMess() 方法
     connect(SaveBtn,&QPushButton::clicked,this,&admin::saveRefMess);
     //打开文件方法openRefMess()
@@ -339,9 +339,19 @@ void admin::changeRefBox()
       }
       else
       {
-            QMessageBox::information(this,"信息","请选择要修改的文件");
+            QMessageBox::information(this,"信息","请选择要修改的文献");
       }
 
 
     return;
+}
+void admin::ExitMess()
+{
+    QMessageBox::StandardButton result=QMessageBox::question(this, "退出","是否保存并退出");
+    if(result == QMessageBox::Yes)
+    {
+        RefFile file;
+        file.formatStoreFile(BOOKLIST);
+        this->close();
+    }
 }

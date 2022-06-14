@@ -30,6 +30,7 @@ public slots:
     //更新列表中显示的文献信息
     virtual void flushListWidget(int row)=0;
 
+    virtual void ExitMess()=0;
 public:
     //创建主窗口中的学生信息面板
     virtual QGroupBox * createRefMess()=0;

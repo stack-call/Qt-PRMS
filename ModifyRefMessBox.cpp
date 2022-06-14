@@ -71,7 +71,7 @@ void ModifyRefMessBox::saveRefMess(){
     //确保所有信息填写后，将信息写入到文件中，否则提示用户将信息填写完整
     if(this->DOI->text() !="" && this->Author->text()!="" && this->Title->text()!="" && this->Journal->text()!="" && this->Date->text()!="" && this->Type->text()!="")
     {
-        /*
+
         for(auto it = BOOKLIST->begin();it!=BOOKLIST->end();++it)
         {
             if(this->DOI->text().toStdString() == it->getDOI())
@@ -79,7 +79,7 @@ void ModifyRefMessBox::saveRefMess(){
                 QMessageBox::warning(this,"提示","文献DOI重复",QMessageBox::Ok);
                 return;
             }
-        }*/
+        }
         if(this->Type->text().toStdString() != "Article" && this->Type->text().toStdString() != "Review")
         {
             QMessageBox::warning(this,"提示","文献类型错误",QMessageBox::Ok);
