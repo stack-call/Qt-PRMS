@@ -36,21 +36,11 @@ ModifyRefMessBox::ModifyRefMessBox(vector<string>* arrayptr)
     Date->setText(QString::fromStdString(arrayptr->at(4)));
     Type->setText(QString::fromStdString(arrayptr->at(5)));
 
-    qDebug()<< QString::fromStdString(arrayptr->at(0));
-    for(auto it = BOOKLIST->begin(); it != BOOKLIST->end(); ++it)
-    {
-        if(it->getDOI() == arrayptr->at(0))
-        {
-            /*
-            if(it == BOOKLIST->end())
-            {
-                BOOKLIST->pop_back();
-                break;
-            }*/
-            BOOKLIST->erase(it);
-            break;//(ToT)大无语，一个break排错两个小时
-        }
-    }
+
+
+    //qDebug()<< QString::fromStdString(arrayptr->at(0));
+
+    //arrayptr->clear();
     qDebug()<<12;
     FormLayout->addRow("DOI:",DOI);
     FormLayout->addRow("作者:",Author);
@@ -95,15 +85,19 @@ void ModifyRefMessBox::saveRefMess(){
             QMessageBox::warning(this,"提示","文献类型错误",QMessageBox::Ok);
             return;
         }
-        Reference* ref = new Reference;
-        ref->setDOI(this->DOI->text().toStdString());
-        ref->setAuthor(this->Author->text().toStdString());
-        ref->setTitle(this->Title->text().toStdString());
-        ref->setJournal(this->Journal->text().toStdString());
-        ref->setDate(this->Date->text().toStdString());
-        ref->setType(this->Type->text().toStdString());
+        for(auto it = BOOKLIST->begin(); it != BOOKLIST->end(); ++it)
+        {
+            if(this->DOI->text().toStdString() == it->getDOI())
+            {
+                it->setDOI(this->DOI->text().toStdString());
+                it->setAuthor(this->Author->text().toStdString());
+                it->setTitle(this->Title->text().toStdString());
+                it->setJournal(this->Journal->text().toStdString());
+                it->setDate(this->Date->text().toStdString());
+                it->setType(this->Type->text().toStdString());
+            }
+        }
 
-        BOOKLIST->push_back(*ref);
 
         this->close();
         emitCloseBox();
