@@ -1,6 +1,7 @@
 ﻿#include <list>
 
 #include "Reference.h"
+#include <iostream>
 #include "AddRefMessBox.h"
 //构建添加文献信息主界面
 #include "RefFile.h"
@@ -56,20 +57,32 @@ void AddRefMessBox::saveRefMess(){
     //确保所有信息填写后，将信息写入到链表中，否则提示用户将信息填写完整
     if(this->DOI->text() !="" && this->Author->text()!="" && this->Title->text()!="" && this->Journal->text()!="" && this->Date->text()!="" && this->Type->text()!="")
     {
-
-        for(auto it = BOOKLIST->begin();it!=BOOKLIST->end();++it)
-        {
-            if(this->DOI->text().toStdString() == it->getDOI())
-            {
-                QMessageBox::warning(this,"提示","文献DOI重复",QMessageBox::Ok);
-                return;
-            }
-        }
         if(this->Type->text().toStdString() != "Article" && this->Type->text().toStdString() != "Review")
         {
             QMessageBox::warning(this,"提示","文献类型错误",QMessageBox::Ok);
             return;
         }
+        for(auto it = BOOKLIST->begin();it!=BOOKLIST->end();++it)
+        {
+            if(this->DOI->text().toStdString() == it->getDOI())
+            {
+                QMessageBox::StandardButton result=QMessageBox::question(this, "修改","文献DOI重复，确定要覆盖文献DOI为【"+QString::fromStdString(it->getDOI())+"】的文献吗？");
+                if(result == QMessageBox::Yes)
+                {
+                    it->setDOI(this->DOI->text().toStdString());
+                    it->setAuthor(this->Author->text().toStdString());
+                    it->setTitle(this->Title->text().toStdString());
+                    it->setJournal(this->Journal->text().toStdString());
+                    it->setDate(this->Date->text().toStdString());
+                    it->setType(this->Type->text().toStdString());
+                    this->close();
+                    emitCloseBox();
+                }
+                return;
+
+            }
+        }
+
         Reference* ref = new Reference;
         ref->setDOI(this->DOI->text().toStdString());
         ref->setAuthor(this->Author->text().toStdString());

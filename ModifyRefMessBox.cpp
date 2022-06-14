@@ -71,15 +71,16 @@ ModifyRefMessBox::ModifyRefMessBox(vector<string>* arrayptr)
     VBox->addLayout(HBox,1);
     this->setLayout(VBox);
     //点击提交按钮时，将新文献信息保存到文件中
-    QObject::connect(submit,&QPushButton::clicked,this,&EditRefMessBox::saveRefMess);
+    QObject::connect(submit,&QPushButton::clicked,this,&ModifyRefMessBox::saveRefMess);
     //点击取消按钮时，关闭添加文献信息窗口
-    QObject::connect(cancel,&QPushButton::clicked,this,&EditRefMessBox::close);
+    QObject::connect(cancel,&QPushButton::clicked,this,&ModifyRefMessBox::close);
 }
 
 //当用户添加提交按钮时，保存文献信息
 void ModifyRefMessBox::saveRefMess(){
     //确保所有信息填写后，将信息写入到文件中，否则提示用户将信息填写完整
-    if(this->DOI->text() !="" && this->Author->text()!="" && this->Title->text()!="" && this->Journal->text()!="" && this->Date->text()!="" && this->Type->text()!=""){
+    if(this->DOI->text() !="" && this->Author->text()!="" && this->Title->text()!="" && this->Journal->text()!="" && this->Date->text()!="" && this->Type->text()!="")
+    {
 
         for(auto it = BOOKLIST->begin();it!=BOOKLIST->end();++it)
         {

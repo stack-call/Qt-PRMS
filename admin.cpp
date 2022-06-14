@@ -57,7 +57,7 @@ QGroupBox * admin::createMenu(){
     DelRefBtn = new QPushButton("删除");
     SaveBtn = new QPushButton("保存");
     ExitBtn = new QPushButton("退出");
-    EditBtn = new QPushButton("编辑");
+    ModifyBtn = new QPushButton("编辑");
     OpenBtn = new QPushButton("打开");
     FindRefEdit = new QLineEdit;
     FindRefEdit->setPlaceholderText("输入任意信息查找...");
@@ -70,26 +70,26 @@ QGroupBox * admin::createMenu(){
 
     Buts->addWidget(SaveBtn,2,0);
     Buts->addWidget(ExitBtn,3,1);
-    Buts->addWidget(EditBtn,3,0);
+    Buts->addWidget(ModifyBtn,3,0);
 
     VBoxLayout->addWidget(ListWidget,4);
     VBoxLayout->addLayout(Buts,2);
 
     box->setLayout(VBoxLayout);
-    //点击添加按钮，执行 addStuBox() 方法
+    //点击添加按钮，执行 addRefBox() 方法
     connect(AddRefBtn,&QPushButton::clicked,this,&admin::AddRefBox);
-    //点击删除按钮，执行 delStuFun() 方法
+    //点击删除按钮，执行 delRefFun() 方法
     connect(DelRefBtn,&QPushButton::clicked,this,&admin::delRefFun);
-    //当向输入框内输入信息后，执行 findStuMess() 方法
+    //当向输入框内输入信息后，执行 findRefMess() 方法
     connect(FindRefEdit,&QLineEdit::returnPressed,this,&admin::findRefMess);
     //点击退出按钮，关闭主窗口
     connect(ExitBtn,&QPushButton::clicked,this,&admin::close);
-    //点击保存按钮，执行 saveStuMess() 方法
+    //点击保存按钮，执行 saveRefMess() 方法
     connect(SaveBtn,&QPushButton::clicked,this,&admin::saveRefMess);
     //打开文件方法openRefMess()
     connect(OpenBtn, &QPushButton::clicked, this, &admin::openRefMess);
     //用户点击编辑后弹出提升，一个是通过单元格修改，一个是通过修改界面修改
-    connect(EditBtn, &QPushButton::clicked, this, &admin::changeRefBox);
+    connect(ModifyBtn, &QPushButton::clicked, this, &admin::changeRefBox);
     return box;
 }
 
@@ -125,7 +125,7 @@ void admin::delRefFun()
     QList<QTableWidgetItem*>items = TableWidget->selectedItems();
     //判断用户是否在表格中选中了某个学生信息，只有选中之后，才能执行删除操作
     if(items.count() > 0){
-        QMessageBox::StandardButton result=QMessageBox::question(this, "删除","确定要删除文献DOI为【"+items.at(0)->text()+"】的同学吗？");
+        QMessageBox::StandardButton result=QMessageBox::question(this, "删除","确定要删除文献DOI为【"+items.at(0)->text()+"】的文献吗？");
         if(result == QMessageBox::Yes)
         {
             for (auto it = BOOKLIST->begin(); it !=BOOKLIST->end(); ++it)
@@ -322,7 +322,7 @@ void admin::changeRefBox()
 {
     vector<string>* arraytemp = new vector<string>;
     QList<QTableWidgetItem*>items = TableWidget->selectedItems();
-
+    qint32 a = items.count();
       if(items.count() > 0 )
       {
             for(int i=0;i < 6;i++)//或者写成6?

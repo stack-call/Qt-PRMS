@@ -60,7 +60,7 @@ private:
 
 
     QPushButton * OpenBtn;
-    QPushButton * EditBtn;
+    QPushButton * ModifyBtn;
     //弹出的添加学生信息窗口
     AddRefMessBox * addmessBox;
     ModifyRefMessBox * changemessBox;
