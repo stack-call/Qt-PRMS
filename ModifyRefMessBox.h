@@ -14,6 +14,9 @@ public slots:
 public:
         //发出 closeBox 信号
         virtual void emitCloseBox();
+private:
+    QString ModifyDOI;
+
 };
 
 #endif // MODIFYREFMESSBOX_H
