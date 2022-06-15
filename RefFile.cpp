@@ -71,9 +71,10 @@ list<Reference>* RefFile::formatReadFile()
         //TiXmlElement *priceElement = rootElement->NextSiblingElement();
         //TiXmlAttribute *dsAttribute = pricetElement->FirstAttribute();
         list<Reference> *bookList = new list<Reference>;
+        Reference* temp = new Reference;
        for(TiXmlElement* p_node=rootElement->FirstChildElement();p_node;p_node=p_node->NextSiblingElement())
        {
-            Reference* temp = new Reference;
+
             /*for(TiXmlElement* c_node=p_node->FirstChildElement();c_node;c_node=c_node->NextSiblingElement())
             {
                 cout<<c_node->FirstAttribute()->Value()<<endl;
@@ -104,6 +105,7 @@ list<Reference>* RefFile::formatReadFile()
             temp->setType(c_node->FirstAttribute()->Value());
             bookList->push_back(*temp);
        }
+       delete temp;
        qDebug()<<bookList->size();
        return bookList;
         // 输出

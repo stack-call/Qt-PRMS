@@ -1,4 +1,4 @@
-#ifndef PRMS_H
+﻿#ifndef PRMS_H
 #define PRMS_H
 #include "login.h"
 class PRMS
@@ -6,6 +6,7 @@ class PRMS
 
 public:
     PRMS();
+    ~PRMS();
 };
 
 

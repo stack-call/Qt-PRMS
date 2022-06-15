@@ -92,7 +92,7 @@ void AddRefMessBox::saveRefMess(){
         ref->setType(this->Type->text().toStdString());
 
         BOOKLIST->push_back(*ref);
-
+        delete ref;
         this->close();
         emitCloseBox();
     }

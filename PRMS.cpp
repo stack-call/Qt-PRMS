@@ -40,3 +40,7 @@ PRMS::PRMS()
        return;
     }
 };
+PRMS::~PRMS()
+{
+    delete BOOKLIST;
+}

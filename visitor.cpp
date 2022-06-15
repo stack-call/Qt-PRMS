@@ -153,6 +153,7 @@ void visitor::findRefMess()
     {
         list<Reference>* templist = new list<Reference>;
         Reference* temp;
+        temp = new Reference;
         for(qint32 i=0;i<count;i++)
         {
             for(qint32 j=0;j<6;j++)
@@ -163,7 +164,7 @@ void visitor::findRefMess()
 
                     findSuccess = true;
                     //TableWidget->selectRow(i);
-                    temp = new Reference;
+
 
                      qint32 k = 0;
                     for(auto it=BOOKLIST->begin(); it != BOOKLIST->end(); ++it)
@@ -189,7 +190,7 @@ void visitor::findRefMess()
 
             }
         }
-
+        delete temp;
         if(findSuccess == false)
         {
             QMessageBox::information(this,"查找失败","当前表格中没有信息["+FindRefEdit->text()+"]");
