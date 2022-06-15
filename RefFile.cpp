@@ -9,13 +9,14 @@
 
 
 list<Reference>* RefFile::bookList = nullptr;
+string RefFile::fileName = "database.xml";
 
 RefFile::RefFile()
 {
 
 }
 
-list<Reference>* RefFile::formatReadFile(const string& szFileName)
+list<Reference>* RefFile::formatReadFile()
 {
     try
     {
@@ -40,7 +41,7 @@ list<Reference>* RefFile::formatReadFile(const string& szFileName)
         }
 */
 
-        if(!xmlDocument->LoadFile(szFileName.c_str()))
+        if(!xmlDocument->LoadFile(fileName.c_str()))
         {
             qDebug()<<"加载XML文件失败";
             const char *errorStr = xmlDocument->ErrorDesc();
@@ -186,6 +187,6 @@ bool RefFile::formatStoreFile(list<Reference>* boolList)
 */
     doc.LinkEndChild( decl );
     doc.LinkEndChild( element );
-    doc.SaveFile( "database.xml" );
+    doc.SaveFile( fileName.c_str() );
     return true;
 }

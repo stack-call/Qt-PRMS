@@ -74,7 +74,7 @@ void ModifyRefMessBox::saveRefMess(){
 
         for(auto it = BOOKLIST->begin();it!=BOOKLIST->end();++it)
         {
-            if(this->DOI->text().toStdString() == it->getDOI())
+            if(this->DOI->text().toStdString() == it->getDOI() && this->DOI->text() != this->ModifyDOI)
             {
                 QMessageBox::warning(this,"提示","文献DOI重复",QMessageBox::Ok);
                 return;

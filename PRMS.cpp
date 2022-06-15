@@ -19,7 +19,7 @@ PRMS::PRMS()
         qout<<a;
 
         RefFile xmlread;
-       BOOKLIST = xmlread.formatReadFile(DEFAULT_FILE_NAME);
+       BOOKLIST = xmlread.formatReadFile();
         if(a == 1)
         {
             admin *adminwindow = new admin;

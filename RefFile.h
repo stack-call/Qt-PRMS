@@ -14,9 +14,10 @@ class RefFile
 public:
     RefFile();
 
-    list<Reference>* formatReadFile(const string& szFileName);
+    list<Reference>* formatReadFile();
     bool formatStoreFile(list<Reference>* bookList);
     static list<Reference>* bookList;
+    static string fileName;
 private:
     void build_one_book(TiXmlElement* parent, Reference* target);
 

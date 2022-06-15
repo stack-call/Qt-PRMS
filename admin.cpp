@@ -304,7 +304,8 @@ void admin::openRefMess()
     {
         return;
     }
-    BOOKLIST = openfile.formatReadFile(fileName.toStdString());
+    RefFile::fileName = fileName.toStdString();
+    BOOKLIST = openfile.formatReadFile();
     flushTable();
     QMessageBox::information(this,"信息","打开文件成功");
     return;
