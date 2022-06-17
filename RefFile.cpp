@@ -47,7 +47,7 @@ list<Reference>* RefFile::formatReadFile()
             const char *errorStr = xmlDocument->ErrorDesc();
             qDebug()<<errorStr; //打印失败原因；
 
-            QMessageBox::warning(NULL, QMessageBox::tr("警告 "),QMessageBox::tr("不是文献XML格式文件"),QMessageBox::Yes);
+            QMessageBox::warning(NULL, QMessageBox::tr("警告 "),QMessageBox::tr("没有默认文献XML格式文件\n将新建文献XML文件"),QMessageBox::Yes);
 
             list<Reference> *bookList = new list<Reference>;
             //bool a = bookList->empty();
