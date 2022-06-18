@@ -39,7 +39,7 @@ void login::adminlogin()
     //获得userNameLEd输入框的文本userNameLEd->text()；
     //trimmed()去掉前后空格
     //tr()函数，防止设置中文时乱码
-    qDebug()<<QString::fromStdString(usermap[user]);
+    //qDebug()<<QString::fromStdString(usermap[user]);
     if(ui->usernameLine->text().trimmed() == tr("admin") &&
            ui->passwordLine->text() == tr(usermap[user].c_str()))
     {

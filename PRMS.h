@@ -6,6 +6,7 @@ class PRMS
 
 public:
     PRMS();
+    void run();
     ~PRMS();
 };
 

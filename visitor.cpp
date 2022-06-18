@@ -221,7 +221,7 @@ void visitor::findRefMess()
 void visitor::openRefMess()
 {
     QString fileName = QFileDialog::getOpenFileName(this, tr("打开文献文件"), "./", tr("文献存储文件 (*.xml)"));
-    qDebug()<<fileName;
+    //qDebug()<<fileName;
     RefFile openfile;
     if(fileName.isEmpty())
     {

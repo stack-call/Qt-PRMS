@@ -8,6 +8,7 @@ int main(int argc, char *argv[])
 
 
     PRMS system;
+    system.run();
 
     return a.exec();
 }

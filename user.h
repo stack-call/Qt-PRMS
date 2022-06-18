@@ -37,7 +37,6 @@ public:
     //创建主窗口中的功能面板
     virtual QGroupBox * createMenu()=0;
 
-    std::string file;
 };
 
 #endif // USER_H

@@ -11,12 +11,15 @@
 
 PRMS::PRMS()
 {
+};
+
+void PRMS::run()
+{
     login *logindialog=new login;
     if(logindialog->exec()==QDialog::Accepted)
     {
         int a = login::loginstatus;
         QTextStream qout(stdout);
-        qout<<a;
 
         RefFile xmlread;
        BOOKLIST = xmlread.formatReadFile();
@@ -39,7 +42,7 @@ PRMS::PRMS()
     {
        return;
     }
-};
+}
 PRMS::~PRMS()
 {
     delete BOOKLIST;

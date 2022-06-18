@@ -41,7 +41,7 @@ ModifyRefMessBox::ModifyRefMessBox(vector<string>* arrayptr)
     //qDebug()<< QString::fromStdString(arrayptr->at(0));
 
     //arrayptr->clear();
-    qDebug()<<12;
+    //qDebug()<<12;
     FormLayout->addRow("DOI:",DOI);
     FormLayout->addRow("作者:",Author);
     FormLayout->addRow("标题:",Title);

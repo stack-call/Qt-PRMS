@@ -43,9 +43,9 @@ list<Reference>* RefFile::formatReadFile()
 
         if(!xmlDocument->LoadFile(fileName.c_str()))
         {
-            qDebug()<<"加载XML文件失败";
+            //qDebug()<<"加载XML文件失败";
             const char *errorStr = xmlDocument->ErrorDesc();
-            qDebug()<<errorStr; //打印失败原因；
+            //qDebug()<<errorStr; //打印失败原因；
 
             QMessageBox::warning(NULL, QMessageBox::tr("警告 "),QMessageBox::tr("没有默认文献XML格式文件\n将新建文献XML文件"),QMessageBox::Yes);
 
@@ -61,7 +61,7 @@ list<Reference>* RefFile::formatReadFile()
         TiXmlElement *rootElement = xmlDocument->RootElement();
 
         // 输出根元素名称
-        qDebug() << rootElement->Value();
+        //qDebug() << rootElement->Value();
         // 获得第一个节点。
         //TiXmlElement *firstElement = rootElement->FirstChildElement();
         // 获得第一个Person的name节点和age节点和ID属性。
@@ -81,32 +81,32 @@ list<Reference>* RefFile::formatReadFile()
 
             }*/
             TiXmlElement* c_node=p_node->FirstChildElement();
-            cout<<c_node->FirstAttribute()->Value()<<endl;
+            //cout<<c_node->FirstAttribute()->Value()<<endl;
             temp->setDOI(c_node->FirstAttribute()->Value());
 
             c_node=c_node->NextSiblingElement();
-            cout<<c_node->FirstAttribute()->Value()<<endl;
+            //cout<<c_node->FirstAttribute()->Value()<<endl;
             temp->setAuthor(c_node->FirstAttribute()->Value());
 
             c_node=c_node->NextSiblingElement();
-            cout<<c_node->FirstAttribute()->Value()<<endl;
+            //cout<<c_node->FirstAttribute()->Value()<<endl;
             temp->setTitle(c_node->FirstAttribute()->Value());
 
             c_node=c_node->NextSiblingElement();
-            cout<<c_node->FirstAttribute()->Value()<<endl;
+            //cout<<c_node->FirstAttribute()->Value()<<endl;
             temp->setJournal(c_node->FirstAttribute()->Value());
 
             c_node=c_node->NextSiblingElement();
-            cout<<c_node->FirstAttribute()->Value()<<endl;
+            //cout<<c_node->FirstAttribute()->Value()<<endl;
             temp->setDate(c_node->FirstAttribute()->Value());
 
             c_node=c_node->NextSiblingElement();
-            cout<<c_node->FirstAttribute()->Value()<<endl;
+            //cout<<c_node->FirstAttribute()->Value()<<endl;
             temp->setType(c_node->FirstAttribute()->Value());
             bookList->push_back(*temp);
        }
        delete temp;
-       qDebug()<<bookList->size();
+       //qDebug()<<bookList->size();
        return bookList;
         // 输出
         //std::cout << firstElement->FirstChild()->Value() << std::endl;
