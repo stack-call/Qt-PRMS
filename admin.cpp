@@ -123,7 +123,7 @@ void admin::flushListWidget(int row){//这个地方有点迷惑
 void admin::delRefFun()
 {
     QList<QTableWidgetItem*>items = TableWidget->selectedItems();
-    //判断用户是否在表格中选中了某个学生信息，只有选中之后，才能执行删除操作
+    //判断用户是否在表格中选中了某个文献信息，只有选中之后，才能执行删除操作
     if(items.count() > 0){
         QMessageBox::StandardButton result=QMessageBox::question(this, "删除","确定要删除文献DOI为【"+items.at(0)->text()+"】的文献吗？");
         if(result == QMessageBox::Yes)

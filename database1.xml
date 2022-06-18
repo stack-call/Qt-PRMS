@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<Reference>
+    <book>
+        <Info DOI="发发" />
+        <Info Author="asdf" />
+        <Info Title="ag" />
+        <Info Journal="adf" />
+        <Info Date="adg" />
+        <Info Type="Article" />
+    </book>
+    <book>
+        <Info DOI="发士大夫" />
+        <Info Author="发" />
+        <Info Title="df" />
+        <Info Journal="gdsfg" />
+        <Info Date="dsfg" />
+        <Info Type="Review" />
+    </book>
+    <book>
+        <Info DOI="发faf" />
+        <Info Author="阿斯蒂芬发" />
+        <Info Title="f阿尔尕" />
+        <Info Journal="e安抚" />
+        <Info Date="发" />
+        <Info Type="Review" />
+    </book>
+</Reference>

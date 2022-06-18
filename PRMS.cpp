@@ -18,7 +18,7 @@ void PRMS::run()
     login *logindialog=new login;
     if(logindialog->exec()==QDialog::Accepted)
     {
-        int a = login::loginstatus;
+        int a = login::loginstatus;//根据不同值从而进入不同界面
         QTextStream qout(stdout);
 
         RefFile xmlread;

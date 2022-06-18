@@ -18,11 +18,11 @@ class EditRefMessBox : public QDialog
     Q_OBJECT
 
 signals:
-    //自定义信号，当添加学生信息完成后，更新主界面上的表格
+    //自定义信号，当添加文献信息完成后，更新主界面上的表格
     void closeBox();
 
 public slots:
-    //将新学生的信息写入到文件中
+    //将新文献的信息写入到文件中
     virtual void saveRefMess()=0;
 public:
     //发出 closeBox 信号

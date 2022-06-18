@@ -120,7 +120,8 @@ list<Reference>* RefFile::formatReadFile()
         return nullptr;
     }
 }
-
+//存储一条文献的信息
+//别问我为什么用book，问就是被上学期的c语言课设影响了 :)
 void RefFile::build_one_book(TiXmlElement* parent, Reference* target)
 {
         string temp;
@@ -154,7 +155,7 @@ void RefFile::build_one_book(TiXmlElement* parent, Reference* target)
         element->SetAttribute("Type",temp.c_str());
         parent->LinkEndChild(element);
 }
-
+//存储链表中文献信息
 bool RefFile::formatStoreFile(list<Reference>* boolList)
 {
     TiXmlDocument doc;

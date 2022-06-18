@@ -9,7 +9,7 @@ class ModifyRefMessBox:public EditRefMessBox
 public:
     ModifyRefMessBox(vector<string>* arrayptr);
 public slots:
-        //将新学生的信息写入到文件中
+        //将新文献的信息写入到文件中
         virtual void saveRefMess();
 public:
         //发出 closeBox 信号

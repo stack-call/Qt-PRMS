@@ -43,7 +43,7 @@ public slots:
 
     virtual void ExitMess();
 public:
-    //创建主窗口中的学生信息面板
+    //创建主窗口中的文献信息面板
     virtual QGroupBox * createRefMess();
     //创建主窗口中的功能面板
     virtual QGroupBox * createMenu();
@@ -62,7 +62,7 @@ private:
 
     QPushButton * OpenBtn;
     QPushButton * ModifyBtn;
-    //弹出的添加学生信息窗口
+    //弹出的添加文献信息窗口
     AddRefMessBox * addmessBox;
     ModifyRefMessBox * changemessBox;
 };

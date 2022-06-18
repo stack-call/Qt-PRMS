@@ -1,27 +1,35 @@
 <?xml version="1.0" ?>
 <Reference>
     <book>
-        <Info DOI="10.16525/j.cnki.cn14-1134/th.2022.04.137" />
-        <Info Author="胡延东" />
-        <Info Title="QT直线共轭内啮合齿轮泵的故障分析与修复" />
-        <Info Journal="机械管理开发" />
-        <Info Date="2022-04-30" />
+        <Info DOI="10.27075/d.cnki.ghzdc.2021.000769" />
+        <Info Author="钟建华" />
+        <Info Title="基于Qt的电路仿真软件开发" />
+        <Info Journal="杭州电子科技大学" />
+        <Info Date="2021-05-01" />
         <Info Type="Article" />
     </book>
     <book>
-        <Info DOI="10.19652/j.cnki.femt.2103457" />
-        <Info Author="王万富 王琢 刘佳鑫 韩亚辉 李春波" />
-        <Info Title="基于Qt/Embedded的农林智能装备导航定位算法研究及软件设计" />
-        <Info Journal="国外电子测量技术" />
-        <Info Date="2022-03-15" />
-        <Info Type="Article" />
-    </book>
-    <book>
-        <Info DOI="10.16311/j.audioe.2022.03.025" />
-        <Info Author="王雅君" />
-        <Info Title="基于Qt开发框架的多波束测深声呐显控技术研究" />
-        <Info Journal="电声技术" />
-        <Info Date="2022-03-05" />
+        <Info DOI="10.16157/j.issn.0258-7998.211433" />
+        <Info Author="侯彭亮 郭苹 王展鹏 王静" />
+        <Info Title="基于Qt的雷达显示及手机客户端设计" />
+        <Info Journal="电子技术应用" />
+        <Info Date="2021-08-06" />
         <Info Type="Review" />
+    </book>
+    <book>
+        <Info DOI="10.19353/j.cnki.dzsj.2021.16.071" />
+        <Info Author="郜慧敏" />
+        <Info Title="计算机代数系统的设计与实现" />
+        <Info Journal="电子世界" />
+        <Info Date="2021-08-30" />
+        <Info Type="Review" />
+    </book>
+    <book>
+        <Info DOI="10.13328/j.cnki.jos.006569" />
+        <Info Author="李广威 袁挺 李炼" />
+        <Info Title="开源C/C++静态软件缺陷检测工具实证研究" />
+        <Info Journal="软件学报" />
+        <Info Date="2022-06-09" />
+        <Info Type="Article" />
     </book>
 </Reference>

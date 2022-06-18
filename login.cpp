@@ -27,7 +27,7 @@ void login::adminlogin()
 {
     std::ifstream inFile;
     inFile.open("admin.password");
-    if (!inFile.is_open()) {
+    if (!inFile.is_open()) {//使用tr好像没太大用处？
         QMessageBox::warning(this, tr("警告"),tr("密码读取错误!\n请检查密码文件"),QMessageBox::Yes);
         exit(-1);
     }
@@ -44,7 +44,7 @@ void login::adminlogin()
            ui->passwordLine->text() == tr(usermap[user].c_str()))
     {
         loginstatus = 1;
-     accept();//关闭窗体，并设置返回值为Accepted
+        accept();//关闭窗体，并设置返回值为Accepted
     }
     else
     {

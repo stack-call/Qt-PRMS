@@ -39,7 +39,7 @@ public slots:
     virtual void flushListWidget(int row);
     virtual void ExitMess(){}
 public:
-    //创建主窗口中的学生信息面板
+    //创建主窗口中的文献信息面板
     virtual QGroupBox * createRefMess();
     //创建主窗口中的功能面板
     virtual QGroupBox * createMenu();

@@ -38,7 +38,7 @@ QGroupBox * visitor::createRefMess(){
     connect(TableWidget,&QTableWidget::cellClicked,this,&visitor::flushListWidget);
     //当用户更改某个单元格内的内容时，调用 changeRefMess() 方法处理
     connect(TableWidget,&QTableWidget::cellChanged,this,&visitor::changeRefMess);
-    //将用户更改某个单元格内的内容时，同时还要更新表格中显示的学生信息
+    //将用户更改某个单元格内的内容时，同时还要更新表格中显示的文献信息
     connect(TableWidget,&QTableWidget::cellChanged,this,&visitor::flushListWidget);
     return box;
 }
@@ -154,7 +154,7 @@ void visitor::findRefMess()
         list<Reference>* templist = new list<Reference>;
         Reference* temp;
         temp = new Reference;
-        for(qint32 i=0;i<count;i++)
+        for(qint32 i=0;i<count;i++)//搜索所有信息的所有部分，类似二维数组，两层循环
         {
             for(qint32 j=0;j<6;j++)
             {

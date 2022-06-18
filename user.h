@@ -32,7 +32,7 @@ public slots:
 
     virtual void ExitMess()=0;
 public:
-    //创建主窗口中的学生信息面板
+    //创建主窗口中的文献信息面板
     virtual QGroupBox * createRefMess()=0;
     //创建主窗口中的功能面板
     virtual QGroupBox * createMenu()=0;
